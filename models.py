@@ -45,30 +45,35 @@ class Subject(models.Model):
     # 비추천
     nonrecommendation = models.IntegerField(default=0)
 
-    # 과제 많음 보통 없음
+    # 과제 - 많음 보통 없음 과제베스트
     homework_large = models.IntegerField(default=0)
     homework_medium = models.IntegerField(default=0)
     homework_small = models.IntegerField(default=0)
+    homework_best = models.CharField(max_length=20, null=True)
 
-    # 팀플 있음 없음
+    # 팀플 - 있음 없음 팀플베스트
     team_yes = models.IntegerField(default=0)
     team_no = models.IntegerField(default=0)
+    team_best = models.CharField(max_length=20, null=True)
 
-    # 학점비율 잘줌 깐깐함 F주의
+    # 학점비율 - 잘줌 깐깐함 F주의 학점비율베스트
     grade_good = models.IntegerField(default=0)
     grade_bad = models.IntegerField(default=0)
     grade_f = models.IntegerField(default=0)
+    grade_best = models.CharField(max_length=20, null=True)
 
-    # 출결 호명 전자출결 안함
+    # 출결 - 호명 전자출결 안함 출결베스트
     attendance_speak = models.IntegerField(default=0)
     attendance_elec = models.IntegerField(default=0)
     attendance_none = models.IntegerField(default=0)
+    attendance_best = models.CharField(max_length=20, null=True)
 
-    # 시험횟수 3번이상 두번 한번 없음
+    # 시험횟수 - 3번이상 두번 한번 없음 시험횟수베스트
     test_3 = models.IntegerField(default=0)
     test_2 = models.IntegerField(default=0)
     test_1 = models.IntegerField(default=0)
     test_0 = models.IntegerField(default=0)
+    test_best = models.CharField(max_length=20, null=True)
 
     def __str__(self):
         return str(self.id) + ' ' + str(self.subject_range) + ' ' + str(self.subject_code) + ' ' + str(self.professor)
