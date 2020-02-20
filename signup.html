@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>회원가입</title>
+<link rel="stylesheet" href="./style.css"> <!--절대경로설정할것 -->
+</head>
+<body>
+<div class="frame">       
+  <div class="header">
+    <h2>대학강의평가 멋사</h2>
+  </div>        
+<!-- 회원가입 창 -->
+<!-- {% extends 'css절대경로' %} -->
+<!--{% block content %} -->
+<div class="signup"><h1>회원가입</h1>
+
+<form>
+    아이디:
+    
+    <input name="username" type="text" value="">
+    <br>
+    <br>
+    <br>
+    비번:
+    
+    <input name="password1" type="password" value="">
+    <br>
+    <br>
+    <br>
+    비번확인:
+    
+    <input name="password2" type="password" value="">
+    <br>
+    <br>
+    <br>
+    <input type="submit" value="눌러보세요">
+</form></div>
+<!-- {% endblock %} -->
+<!--각자 페이지 마다 콘텐츠 들어갈 부분 끝-->
+<!-- <form method="post" action="{% url '절대:경로' %}"></form> -->
+<div class="container">
+   <!--절대경로설정할것 -->
+  <div class="logo"><img src="logo.png" width="120px"> </div>
+  <div class="footer" >조선대학교 멋쟁이 사자처럼 김창우 김미영 마서연 한지원 윤지유</div>
+    
+  </div> <!-- //footer -->
+</div>
+</body>
+</html>
