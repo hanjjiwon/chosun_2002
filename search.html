@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        .selectbox{
+            width: 350px;
+        }
+    </style>
+
+
+
+</head>
+<body>>
+    
+    <center><h1 style="margin-top: 50px;">로고넣을자리</h1>
+        <br>
+        <br>
+    <div class="search_bar" style="width : 800px">
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="button-addon2">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button" id="button-addon2">검색</>
+            </div>
+        </div>
+    </div>
+    <h5>수강과목 검색</h5>
+        <!-- 자바스크립트 (select box 부분)-->
+        <script>
+            function categoryChange(f) {
+                var cat_a = ['중핵', '사고와 표현/보고서작성 및 발표', '대학영어/ESL1', '생활영어/ESL2', '자기계발과 사회봉사', '고전 및 외국어'];
+                var cat_b = ['인성과 논리', '문학과 예술', '역사와 사회', '자연과 과학'];
+                var cat_c = ['인문학과 예술체육', '사회과학과 국제문화', '정보화와 과학기술', '취업과 창업'];
+                var cat_d = ['기초인문사회', '기초자연과학'];
+                var target = document.getElementById("second");
+            
+                if(f.value == "a") var e = cat_a;
+                else if(f.value == "b") var e = cat_b;
+                else if(f.value == "c") var e = cat_c;
+                else if(f.value == "d") var e = cat_d
+            
+                target.options.length = 0;
+            
+                for (x in e) {
+                    var opt = document.createElement("option");
+                    opt.value = e[x];
+                    opt.innerHTML = e[x];
+                    target.appendChild(opt);
+                }	
+            }
+        </script>
+        
+        <select class="selectbox" id="first" onchange="categoryChange(this)">
+            <option>선택해주세요</option>
+            <option value="a">기초교양</option>
+            <option value="b">심화교양</option>
+            <option value="c">일반교양</option>
+            <option value="d">기초교육</option>
+        </select>
+        
+        <select class="selectbox" id="second">
+        <option>선택해주세요</option>
+        </select>
+        <button class="btn btn-primary" type="submit">검색</button>
+    <div style="height:30px"></div>
+
+
+    <h5 styel="text-align:left">최근 강의평</h5>
+    <div class="card" style="width: 800px;">
+        <div class="card-body">
+            <h5 class="card-title" style="text-align: left;">강의명</h5>
+            <p class="card-text" style="text-align: left;">에벱베ㅔ베베베강의평가내용어쩌고저쩌고</p>
+            <a href="#" class="btn btn-primary">자세히보기</a>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="card" style="width: 800px;">
+        <div class="card-body">
+            <h5 class="card-title" style="text-align: left;">강의명</h5>
+            <p class="card-text" style="text-align: left;">에벱베ㅔ베베베강의평가내용어쩌고저쩌고</p>
+            <a href="#" class="btn btn-primary">자세히보기</a>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="card" style="width: 800px;">
+        <div class="card-body">
+            <h5 class="card-title" style="text-align: left;">강의명</h5>
+            <p class="card-text" style="text-align: left;">에벱베ㅔ베베베강의평가내용어쩌고저쩌고</p>
+            <a href="#" class="btn btn-primary">자세히보기</a>
+        </div>
+    </div>
+
+    </center>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
