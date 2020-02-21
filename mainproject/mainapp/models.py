@@ -1,5 +1,6 @@
 from django.db import models
 
+# Create your models here.
 # 계정 테이블
 class Account(models.Model):
     id = models.CharField(max_length=20, primary_key=True)
