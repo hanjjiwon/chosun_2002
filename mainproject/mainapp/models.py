@@ -1,6 +1,9 @@
 from django.db import models
 
+<<<<<<< HEAD
 # Create your models here.
+=======
+>>>>>>> master
 # 계정 테이블
 class Account(models.Model):
     id = models.CharField(max_length=20, primary_key=True)
@@ -95,4 +98,8 @@ class Evaluation(models.Model):
     subject_id = models.ForeignKey(Subject, on_delete=models.CASCADE)
 
     def __str__(self):
+<<<<<<< HEAD
         return str(self.id) + ' ' + self.writer_id
+=======
+        return str(self.id) + ' ' + self.writer_id
+>>>>>>> master
