@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'mainapp.apps.MainappConfig',
+    'user.apps.UserConfig',
 ]
 
 MIDDLEWARE = [
@@ -55,7 +56,7 @@ ROOT_URLCONF = 'mainproject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['user'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -119,9 +120,26 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 
+STATIC_URL = '/static/'
+
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
-]
+    os.path.join(BASE_DIR,  'static')
+]#파일의 경로
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'mainproject','static')
-STATIC_URL = '/static/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+MEDIA_URL = '/media/'
+
+# 로그인이 되어있지 않은 경우 로그인 페이지로 리다이렉트하는 url
+LOGIN_URL = '/user/login/'
+
+# 로그인 시 리다이렉트할 url
+LOGIN_REDIRECT_URL = "http://127.0.0.1:8000/"
+
+# 로그아웃 후 리다이렉트할 url
+LOGOUT_REDIRECT_URL = "/"
+
+# 세션 유효기간 설정 (초단위)
+SESSION_COOKIE_AGE = 60 * 60
